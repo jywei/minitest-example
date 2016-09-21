@@ -3,6 +3,8 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'maxitest/autorun'
 require 'database_cleaner'
+require "minitest/reporters"
+Minitest::Reporters.use!
 
 DatabaseCleaner.strategy = :transaction
 

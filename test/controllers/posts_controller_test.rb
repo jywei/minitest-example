@@ -5,10 +5,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   #   @post = posts(:one)
   # end
 
-  # test "should get index" do
-  #   get posts_url
-  #   assert_response :success
-  # end
+  test "should get index" do
+    get posts_url
+    assert_response :success
+    assert_select "title", "#{@base_title}"
+  end
 
   # test "should get new" do
   #   get new_post_url
@@ -48,6 +49,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   #
   def setup
     @post = create(:post)
+    @base_title = "Ruby on Rails Minitest Example"
   end
 
   def test_index
