@@ -51,6 +51,7 @@ group :test do
 
   # For better display
   gem 'minitest-reporters'
+  gem 'maxitest'
 
   # For managing testing data
   gem 'factory_girl'
